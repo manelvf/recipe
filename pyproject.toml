@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "whats-for-dinner"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{ include = "whats_for_dinner", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+haystack-ai = "2.2.4"
+fastapi = "^0.111.0"
+psycopg2-binary = "^2.9.9"
+pillow = "^10.4.0"
+datasets = ">=2.6.1"
+sentence-transformers = ">=3.0.0"
+psycopg = {extras = ["binary"], version = "^3.2.3"}
+pgvector = "^0.3.6"
+pgvector-haystack = "^1.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.scripts]
+start = "src.whats_for_dinner.main:start"
